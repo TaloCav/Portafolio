@@ -1,0 +1,213 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+display: grid;
+grid-template-rows: 70px 1fr 30px;
+}
+
+header{
+    background: linear-gradient(180deg, #0B0C0B 0%, #0B0C0B 77%, rgba(47, 169, 27, 0.81) 82.5%, #0F3E08 100%); 
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.navbar > ul > li > a{
+    font-family: Michroma;
+    text-decoration: none;
+    padding: 20px;
+    position: relative;
+    color:#ffff;
+
+}
+
+main{
+    background: linear-gradient(180deg, #000 15.5%, rgba(0, 0, 0, 0.80) 51%, #000 90.5%); 
+}
+
+footer{
+    background-color: white ;
+    text-align: center;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    font-family: Michroma; 
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.btn-contacto {
+    background-color: #059100;
+    padding: 0 20px;
+    height: 25px;
+    border-radius: 25px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0px;
+    transition-timing-function: 0.5s;
+}
+
+.esquinaIzq{
+    color: #00FF1A;
+    font-family: "Rubik Burned", system-ui;
+    font-size: 300%;
+    display: flex;
+    justify-content: start;
+    margin-top: -3%;
+    margin-left: 1;
+}
+
+.nombre {
+    font-size: 30px;
+    font-family: Michroma; 
+    color: #ffff;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.loQueQuiero {
+    font-size: 20px;
+    font-family: Michroma; 
+    color: #ffff;
+    margin-top: -1%;
+    margin-left: 15%;
+}
+
+
+.bienvenido {
+    color: #ffff;
+    font-size: 40px;
+    font-family: Michroma; 
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+ .textoSobreMi{
+    font-family: "Mate SC", serif;
+    color: #ffff;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;      
+ }
+
+
+.contenedor{
+    background-color:purple;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: -20px;
+}
+
+.contenedor2 {
+    background-color: red;
+    display: flex;
+    justify-content: center;     
+}
+
+.contenedor3{
+    background-color:purple;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin: 20%;
+    margin-top: 100px;
+}
+
+.contenedor4{
+    background-color:purple;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    margin-top: -20px;
+}
+
+.titulo3Proyecto{
+    display: flex;
+    align-content: center;    
+    justify-content: center;
+    
+}
+
+.divisor{
+    background: rgba(47, 169, 27, 0.78); 
+    height: 10px;
+    display: flex;
+    margin-top: -20px;
+}
+
+.integrador {
+    margin-left: 2%;
+    margin-top: 4%;
+    border: black;
+}
+
+/* Prueba de efecto en una imagen  */
+
+.proyectoIntegradorEffect{
+    position: relative;
+    width: 250px;  
+    transition: all 0.3s ease;  
+}
+
+.proyectoIntegradorEffect img:first-child {
+    box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+      
+.proyectoIntegradorEffect img:last-child {
+    position: absolute;  
+    width: 200px;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;  
+    transform: translateY(25%);  
+    transition: 0.3s ease;  
+    opacity: 0;  
+}
+  
+.proyectoIntegradorEffect:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.proyectoIntegradorEffect::before {
+    content: "";  
+    position: absolute;  
+    bottom: 0;  
+    height: 100%;  
+    width: 100%;  
+    background-image: linear-gradient(to bottom,transparent 10%, rgba(0, 0, 0, 0.5) 50%,rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all 0.3s ease;  
+}
+
+.proyectoIntegradorEffect:hover::before {
+    opacity: 1;  
+}
+      
+.proyectoIntegradorEffect:hover img:last-child {  
+    opacity: 1;  
+    transform: translateY(10%);  
+  }
